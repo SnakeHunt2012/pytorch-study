@@ -286,13 +286,12 @@ print("Done!")
 
 ### Saving Models ###
 
-torch.save(model.state_dict(), "model.pth")
-print("Saved PyTorch Model State to model.pth")
+torch.save(model, "model.pth")
+print("Saved PyTorch Model to model.pth")
 
 ### Loading Models ###
 
-model = NeuralNetwork().to(device)
-model.load_state_dict(torch.load("model.pth"))
+model = torch.load("model.pth")
 
 classes = [
     "T-shirt/top",
